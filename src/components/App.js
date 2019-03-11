@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import '../index.css';
 import Header from '../components/Header';
 import ZipCode from '../components/ZipCode';
+import Forecast from './Forecast';
 
 
 class App extends Component {
@@ -10,8 +11,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Header /> 
-          <ZipCode />
+          <Header />
+          <Route exact path="/" component={ZipCode} />
+          <Route path="/:zipcode/forecast" component={Forecast} />
         </div>
       </BrowserRouter>
     );
