@@ -17,6 +17,7 @@ class Forecast extends React.Component {
     this.state = {
       forecastData: {},
       error: null,
+      zipCodeData: {}
     };
   }
 
@@ -41,6 +42,20 @@ class Forecast extends React.Component {
           error: error.errorMessage
         });
       });
+
+      fetch(`${process.env.REACT_APP_API_2}${zipcode}?key=${process.env.REACT_APP_API_KEY_2}`)
+        .then(handleResponse)
+        .then(zipCodeData => {
+          this.setState({
+            zipCodeData,
+            error: null
+          });
+        })
+        .catch(error => {
+          this.setState({
+            error: error.errorMessage
+          });
+        });
   }
 
   extractIcon = () => {
@@ -77,7 +92,8 @@ class Forecast extends React.Component {
 
 
     render() {
-      const { forecastData } = this.state;
+      const { forecastData, zipCodeData } = this.state;
+      console.log(zipCodeData)
 
       if (!Object.keys(forecastData)){
         return <div>Loading.....</div>
@@ -86,7 +102,7 @@ class Forecast extends React.Component {
       console.log(defaults)
       return (
         <div>
-          <h1>{forecastData.name}</h1>
+          <h1>{forecastData.name}, {zipCodeData.State}</h1>
           <ReactAnimatedWeather
             icon={defaults.icon}
             color={defaults.color}
