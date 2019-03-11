@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Fetch error helper
  * @param {object} response
@@ -13,7 +11,6 @@ export const getSearchMethod = (searchTerm) => {
   if (searchTerm.length === 5 && Number.parseInt(searchTerm) + '' === searchTerm){
     return 'zip';
   }
-    
   else 
    return 'q';
 }

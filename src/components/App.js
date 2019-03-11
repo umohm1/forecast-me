@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import '../index.css';
-import Header from '../components/Header';
-import ZipCode from '../components/ZipCode';
+import Header from './Header';
+import ZipCode from './ZipCode';
 import Forecast from './Forecast';
+import Loading from './Loading';
 
 
 class App extends Component {
@@ -12,8 +13,11 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header />
-          <Route exact path="/" component={ZipCode} />
-          <Route path="/:zipcode/forecast" component={Forecast} />
+          <Switch>
+            <Route exact path="/" component={ZipCode} />
+            <Route path="/:zipcode/forecast" component={Forecast} />
+            <Route component={Loading} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
