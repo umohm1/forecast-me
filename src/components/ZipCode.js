@@ -11,13 +11,17 @@ class ZipCode extends React.Component {
 
   handleSubmitZipCode = () => {
     this.props.history.push(`${this.state.zipcode}/forecast`)
+
+    this.setState({
+      zipcode: ''
+    });
   }
 
   handleUpdateZipcode = (e) => {
     let zip = e.target.value;
     this.setState({
       zipcode: zip
-    })
+    });
   }
 
   render() {

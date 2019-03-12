@@ -1,10 +1,19 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import App from './App';
+import expect from 'expect';
+import App from '../src/components/App';
 
-it('renders without crashing', () => {
   const wrapper = mount(<App />);
-  expect(wrapper.find('div').length).toEqual(1)
-  expect(wrapper.find('Header').length).toEqual(1);
-  expect(wrapper.find('Route').length).toEqual(1);
-});
+  describe('<App />', () => {
+    it('should check that a div exists', () => {
+      expect(wrapper.find('div').length).toEqual(1)
+    });
+
+    it('should check that a div exists', () => {
+      expect(wrapper.find('Header').length).toEqual(1);
+    });
+
+    it('should check that a Route exists', () => {
+      expect(wrapper.find('Route').length).toEqual(1);
+    });
+  });

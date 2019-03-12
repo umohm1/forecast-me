@@ -3,6 +3,9 @@ import ReactAnimatedWeather from 'react-animated-weather';
 import moment from 'moment';
 import { handleResponse } from '../helpers';
 import Loading from './Loading';
+import ZipCode from './ZipCode';
+// import Share from './Share';
+
 
 let defaults = {
   icon: 'CLEAR_DAY',
@@ -95,9 +98,11 @@ class Forecast extends React.Component {
       case '50d':
         defaults.icon = 'WIND';
         defaults.color = 'goldenrod';
+        break;
       case '50d':
         defaults.icon = 'FOG';
         defaults.color = 'goldenrod';
+        break;
       default:
         defaults.icon = 'RAIN';
         defaults.color = 'goldenrod';
@@ -133,6 +138,7 @@ class Forecast extends React.Component {
           </p>
           <p>{forecastData.description}</p>
           <p>{moment().format('MMMM Do, YYYY')}</p>
+          <ZipCode />
         </div>
       );
     }
