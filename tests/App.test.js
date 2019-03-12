@@ -6,10 +6,10 @@ import App from '../src/components/App';
   const wrapper = mount(<App />);
   describe('<App />', () => {
     it('should check that a div exists', () => {
-      expect(wrapper.find('div').length).toEqual(1)
+      expect(wrapper.find('div').exists()).toBeTruthy();
     });
 
-    it('should check that a div exists', () => {
+    it('should check that a Header exists', () => {
       expect(wrapper.find('Header').length).toEqual(1);
     });
 

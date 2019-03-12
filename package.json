@@ -33,6 +33,10 @@
     "not op_mini all"
   ],
   "jest": {
+    "moduleNameMapper":{
+    "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    },
     "setupTestFrameworkScriptFile": "./tests/setupTests.js",
     "collectCoverageFrom": [
       "tests/*.{js,jsx}"
