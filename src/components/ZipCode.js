@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class ZipCode extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class ZipCode extends React.Component {
   }
 
   handleSubmitZipCode = () => {
-    this.props.history.push(`${this.state.zipcode}/forecast`)
+    this.props.history.push(`/${this.state.zipcode}/forecast`)
 
     this.setState({
       zipcode: ''
@@ -44,4 +45,4 @@ class ZipCode extends React.Component {
   }
 }
 
-export default ZipCode;
+export default withRouter(ZipCode);

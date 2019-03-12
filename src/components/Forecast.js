@@ -27,6 +27,14 @@ class Forecast extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  componentDidUpdate() {
+    this.fetchData();
+  }
+
+  fetchData() {
     const { zipcode } = this.props.match.params;
     
     fetch(`${ process.env.REACT_APP_API}/weather?zip=${zipcode}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
@@ -40,7 +48,8 @@ class Forecast extends React.Component {
             description: forecastData.weather[0].description.toUpperCase()
           },
           error: null,
-          loading: false
+          loading: false,
+          zipcode: zipcode
         });
       })
       .catch(error => {
@@ -55,7 +64,8 @@ class Forecast extends React.Component {
           this.setState({
             zipCodeData,
             error: null,
-            loading: false
+            loading: false,
+            zipcode2: zipcode
           });
         })
         .catch(error => {
@@ -63,6 +73,10 @@ class Forecast extends React.Component {
             error: error.errorMessage
           });
         });
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return (this.props.match.params !== nextProps.match.params || this.state.zipcode !== nextState.zipcode || this.state.zipcode2 !== nextState.zipcode2);
   }
 
   extractIcon = () => {

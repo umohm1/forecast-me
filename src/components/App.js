@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './index.css';
+import '../index.css';
 import Header from './Header';
 import ZipCode from './ZipCode';
 import Forecast from './Forecast';
