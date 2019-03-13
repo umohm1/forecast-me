@@ -11,7 +11,7 @@ class Share extends React.Component {
           <img src={linkedin} alt="linkedin" width="70" height="50" className="linkedin" />
         </a>
         <a href="https://twitter.com/home?status=My%20weather%20forecast!">
-          <img src={twitter} alt="" width="70" height="50" className="linkedin" />
+          <img src={twitter} alt="" width="70" height="50" className="twitter" />
         </a>
         <a href="https://pinterest.com/pin/create/button/?url=&media=My%20weather%20forecast!&description=">
           <img src={pinterest} alt="" width="70" height="50" className="pinterest"/>
