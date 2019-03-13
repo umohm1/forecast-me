@@ -24,9 +24,9 @@ https://www.zip-codes.com/zip-code-api.asp
 
 ## Tests
 
-Run tests with jest in the terminal
+Run tests using jest in the terminal
 
-![image](https://i.imgur.com/Ff40jiI.png)
+![image](https://i.imgur.com/Ff40jiI.png =250x250)
 
 
 ## Contribution
