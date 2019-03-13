@@ -1,21 +1,21 @@
 import React from 'react';
-import facebook from '../images/facebook.png'
-import google from '../images/google.png'
-import twitter from '../images/twitter.png'
+import linkedin from '../images/linkedin.svg'
+import pinterest from '../images/pinterest.svg'
+import twitter from '../images/twitter.svg'
 
 class Share extends React.Component {
   render() {
     return (
       <div>
         Share:
-        <a href="https://www.facebook.com/sharer/sharer.php?u=My%20weather%20forecast!">
-          <img src={facebook} alt="" />
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=My%20weather%20forecast&title=&summary=&source=">
+          <img src={linkedin} alt="" width="70" height="70" />
         </a>
         <a href="https://twitter.com/home?status=My%20weather%20forecast!">
-          <img src={twitter} alt="" />
+          <img src={twitter} alt="" width="70" height="70" />
         </a>
-        <a href="https://plus.google.com/share?url=My%20weather%20forecast!">
-          <img src={google} alt="" />
+        <a href="https://pinterest.com/pin/create/button/?url=&media=My%20weather%20forecast!&description=">
+          <img src={pinterest} alt="" width="70" height="70" />
         </a>
       </div>
     );

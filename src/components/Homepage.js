@@ -83,8 +83,6 @@ class Homepage extends React.Component {
         >
           Get Forecast
         </button>
-        
-        // only display the forecast component when the zipcodedata and forecast data have been fetched
         {zipCodeData && forecastData && (
           <Forecast
             zipCodeData={zipCodeData}
