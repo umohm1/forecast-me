@@ -1,14 +1,97 @@
+html {
+  background:  linear-gradient(to bottom right, rgb(45, 167, 224),
+  rgba(78, 75, 197, 0.39),
+  rgba(253, 217, 73, 1),
+  rgba(233, 116,5,1));
+  background-size: cover;  
+  height: 100%; 
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Shadows Into Light', cursive; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.homepage p {
+  padding-left: 20px;
+  font-size: 45px;
+  color: white;
+}
+
+.homepage div {
+  position: absolute;
+  left: 38%;
+  top: 250px;
+}
+
+.homepage div p {
+  text-align: center;
+}
+
+.homepage div img {
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.zip-container {
+  position: absolute;
+  margin-top: 40px;
+  top: -2px;
+  right: 207px;
+  padding: 9px 17px 10px 10px;
+}
+
+.zip-btn {
+  position: absolute;
+  margin-top: 26px;
+  top: 10px;
+  right: 76px;
+  border-radius: 10px;
+  padding: 11px 23px 11px 23px;
+  text-shadow:1px 1px 0px #ffffff;
+}
+
+.zip-btn:hover {
+  background-color: rgba(73, 12, 240, 0.247);
+  color: black;
+}
+
+.shareIcons {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.forecast {
+  position: absolute;
+  left: 38%;
+  -webkit-animation: forecast 3s; 
+  -webkit-animation-fill-mode: forwards;
+  animation: forecast 3s;
+  animation-fill-mode: forwards;
+}
+  @-webkit-keyframes forecast {
+  from {top: 0px;}
+  to {top: 150px;}
+}
+
+@keyframes forecast {
+  from {top: 0px;}
+  to {top: 150px;}
+}
+
+.forecast p {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.forecast h1 {
+  text-align: center;
+  color: white;
 }

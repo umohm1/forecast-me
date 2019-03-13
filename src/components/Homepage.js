@@ -13,6 +13,8 @@ class Homepage extends React.Component {
   }
 
   handleSubmitZipCode = () => {
+   this.props.history.push(`${this.state.zipcode}/forecast`);
+
    this.fetchData()
 
     this.setState({
@@ -76,10 +78,12 @@ class Homepage extends React.Component {
           onChange={this.handleUpdateZipcode}
           type="text"
           value={this.state.zipcode}
+          className="zip-container"
         />
         <button
           onClick={this.handleSubmitZipCode}
           disabled={!this.state.zipcode}
+          className="zip-btn"
         >
           Get Forecast
         </button>
