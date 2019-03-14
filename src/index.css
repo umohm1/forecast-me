@@ -16,23 +16,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.homepage p {
+.header p {
   padding-left: 20px;
   font-size: 45px;
   color: white;
 }
 
-.homepage div {
-  position: absolute;
-  left: 38%;
-  top: 250px;
-}
-
-.homepage div p {
+.homepage p {
+  font-size: 55px;
+  color: white;
   text-align: center;
 }
 
-.homepage div img {
+.homepage {
+  position: absolute;
+  left: 38%;
+  top: 50px;
+  padding-top: 180px;
+}
+
+.homepage img {
   margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -48,7 +51,7 @@ body {
 
 .zip-btn {
   position: absolute;
-  margin-top: 26px;
+  margin-top: 28px;
   top: 10px;
   right: 76px;
   border-radius: 10px;
@@ -61,10 +64,37 @@ body {
   color: black;
 }
 
+.zip-container2 {
+  position: absolute;
+  margin-top: -100px;
+  top: -2px;
+  right: -489px;
+  padding: 9px 17px 10px 10px;
+}
+
+.zip-btn2 {
+  position: absolute;
+  margin-top: -113px;
+  top: 10px;
+  right: -618px;
+  border-radius: 10px;
+  padding: 11px 23px 11px 23px;
+  text-shadow:1px 1px 0px #ffffff;
+}
+
+.zip-btn2:hover {
+  background-color: rgba(73, 12, 240, 0.247);
+  color: black;
+}
+
 .shareIcons {
   position: absolute;
   bottom: 0;
   text-align: center;
+}
+
+.share2 {
+  margin-left: -679px;
 }
 
 .forecast {
@@ -74,6 +104,7 @@ body {
   -webkit-animation-fill-mode: forwards;
   animation: forecast 3s;
   animation-fill-mode: forwards;
+  font-weight: bold;
 }
   @-webkit-keyframes forecast {
   from {top: 0px;}
