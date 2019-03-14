@@ -36,14 +36,10 @@ class Forecast extends React.Component {
       loading: true
     });
 
-    fetch(`${process.env.REACT_APP_API}/weather?zip=${zipcode}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
+    fetch(`${REACT_APP_API}/weather?zip=${zipcode}&appid=${REACT_APP_API_KEY}&units=imperial`)
       .then(handleResponse)
       .then(forecastData => {
-        fetch(
-          `${process.env.REACT_APP_API_2}${zipcode}?key=${
-            process.env.REACT_APP_API_KEY_2
-          }`
-        )
+        fetch(`${REACT_APP_API_2}${zipcode}?key=${REACT_APP_API_KEY_2}`)
           .then(handleResponse)
           .then(zipCodeData => {
             this.setState({
