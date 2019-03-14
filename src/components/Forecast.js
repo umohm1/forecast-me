@@ -31,10 +31,14 @@ class Forecast extends React.Component {
       loading: true
     });
 
-    fetch(`${process.env.REACT_APP_API}/weather?zip=${zipcode}&appid=${process.env.REACT_APP_API_TEMP}&units=imperial`)
+    fetch(`${process.env.REACT_APP_API}/weather?zip=${zipcode}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
       .then(handleResponse)
       .then(forecastData => {
-        fetch(`${process.env.REACT_APP_API_2}${zipcode}?key=${process.env.REACT_APP_API_KEY_2}`)
+        fetch(
+          `${process.env.REACT_APP_API_2}${zipcode}?key=${
+            process.env.REACT_APP_API_KEY_2
+          }`
+        )
           .then(handleResponse)
           .then(zipCodeData => {
             this.setState({
@@ -55,8 +59,8 @@ class Forecast extends React.Component {
             });
           });
       })
-          .catch(error => {
-          this.setState({
+      .catch(error => {
+        this.setState({
           error: error.errorMessage
         });
       });
