@@ -13,6 +13,11 @@ let defaults = {
   animate: true
 };
 
+const REACT_APP_API = 'https://api.openweathermap.org/data/2.5/';
+const REACT_APP_API_KEY = 'cb840163ca682404b16c0910853a8efa';
+const REACT_APP_API_2 ='https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/';
+const REACT_APP_API_KEY_2 = 'R59ORGPER5Q9IFO8F70N';
+
 class Forecast extends React.Component {
   state = {
     loading: true
