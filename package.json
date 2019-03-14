@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-run-build-script": "true"
+    "heroku-run-build-script": "true",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,9 +34,9 @@
     "not op_mini all"
   ],
   "jest": {
-    "moduleNameMapper":{
-    "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
-    "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/__mocks__/fileMock.js"
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/__mocks__/fileMock.js"
     },
     "setupTestFrameworkScriptFile": "./tests/setupTests.js",
     "collectCoverageFrom": [
@@ -67,5 +68,6 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "heroku-run-build-script": true
 }
